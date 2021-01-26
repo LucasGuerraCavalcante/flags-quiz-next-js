@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
@@ -21,33 +22,45 @@ const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Alura Quiz</title>
-
       </Head>
+      
       <QuizContainer>
         <Widget>
           <Widget.Header>
             <h1>
-              AAAAAAAAAA
+              Quiz de bandeiras
             </h1>
           </Widget.Header>
           <Widget.Content>
-            <p>
-              aaaaaaaaaaa
-            </p>
+            <form onSubmit={function (event) {
+              event.preventDefault();
+
+              router.push(`/quiz?name=${name}`);
+            }} >
+              <input 
+                placeholder="Digite seu nome" 
+                onChange={function (event) {  
+                  setName(event.target.value);
+                }}
+              />
+              <button type="submit" disabled={name.length === 0} >
+                  Jogar {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
+
         <Widget>
           <Widget.Content>
-            <h1>
-              BBBBBBBBBBB
-            </h1>
-            <p>
-              bbbbbbbbbbb
-            </p>
+            
           </Widget.Content>
         </Widget>
         <Footer />
