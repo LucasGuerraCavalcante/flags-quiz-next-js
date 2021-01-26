@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Head from 'next/head';
+
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
@@ -20,22 +22,26 @@ const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <QuizBackground backgroundImage={db.bg} >
+    <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Alura Quiz</title>
+
+      </Head>
       <QuizContainer>
         <Widget>
           <Widget.Header>
             <h1>
               AAAAAAAAAA
             </h1>
-            </Widget.Header>
-            <Widget.Content>
+          </Widget.Header>
+          <Widget.Content>
             <p>
               aaaaaaaaaaa
             </p>
           </Widget.Content>
         </Widget>
         <Widget>
-        <Widget.Content>
+          <Widget.Content>
             <h1>
               BBBBBBBBBBB
             </h1>
@@ -48,5 +54,5 @@ export default function Home() {
         <GitHubCorner projectUrl="https://github.com/LucasGuerraCavalcante" />
       </QuizContainer>
     </QuizBackground>
-  )
+  );
 }
