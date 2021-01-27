@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
@@ -45,15 +47,15 @@ export default function Home() {
 
               router.push(`/quiz?name=${name}`);
             }} >
-              <input 
+              <Input 
+                name="nomeDoUsuario"
+                value={name}
                 placeholder="Digite seu nome" 
-                onChange={function (event) {  
-                  setName(event.target.value);
-                }}
+                onChange={(event) => setName(event.target.value)}
               />
-              <button type="submit" disabled={name.length === 0} >
+              <Button type="submit" disabled={name.length === 0} >
                   Jogar {name}
-              </button>
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
