@@ -39,9 +39,9 @@ function QuestionWidget({
       <img
         alt="Descrição"
         style={{
-          width: '100%',
-          height: '150px',
-          objectFit: 'cover',
+          width: '500px',
+          height: '300px',
+          objectFit: 'fill',
         }}
         src={question.image}
       />
@@ -126,6 +126,7 @@ export default function QuizPage() {
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
+
         {screenState === screenStates.QUIZ && (
           <QuestionWidget
             question={question}
