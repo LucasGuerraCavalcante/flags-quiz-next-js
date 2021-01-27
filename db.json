@@ -1,28 +1,114 @@
 {
-    "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "bg": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.wallpaperback.net%2Fwp-content%2Fuploads%2F2018%2F06%2FWallpaper%2520Earth%2C%2520moon%2C%2520planet%2C%2520star%2C%25205k%2C%2520Space%25205598219314.jpg&f=1&nofb=1",
+    "title": "Quiz de bandeiras",
+    "description": "Teste a sua capacidade de reconhecer as bandeiras dos mais variados países.",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://flagpedia.net/data/flags/w580/mx.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Fácil",
+        "answer": 1,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Itália",
+          "México",
+          "Portugal",
+          "Espanha"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://flagpedia.net/data/flags/w580/cn.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Fácil",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "China",
+          "Vietnã",
+          "União Soviética",
+          "Angola"
+        ]
+      },
+      {
+        "image": "https://flagpedia.net/data/flags/w580/jm.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Fácil",
+        "answer": 0,
+        "alternatives": [
+          "Suriname",
+          "Namíbia",
+          "Uganda",
+          "Jamaica"
+        ]
+      },
+      {
+        "image": "https://flagpedia.net/data/flags/w580/ir.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Médio",
+        "answer": 1,
+        "alternatives": [
+          "Turquia",
+          "Irã",
+          "Argélia",
+          "Indonésia"
+        ]
+      },
+      {
+        "image": "https://flagpedia.net/data/flags/w580/no.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Médio",
+        "answer": 1,
+        "alternatives": [
+          "Islândia",
+          "Noruega",
+          "Dinamarca",
+          "Finlândia"
+        ]
+      },
+      {
+        "image": "https://flagpedia.net/data/flags/w580/gr.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Médio",
+        "answer": 0,
+        "alternatives": [
+          "Grécia",
+          "Estônia",
+          "Finlândia",
+          "Eslováquia"
+        ]
+      },
+      {
+        "image": "https://flagpedia.net/data/flags/w580/mn.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Difícil",
+        "answer": 3,
+        "alternatives": [
+          "Bangladesh",
+          "Nepal",
+          "Butão",
+          "Mongólia"
+        ]
+      },
+      {
+        "image": "https://flagpedia.net/data/flags/w580/sr.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Difícil",
+        "answer": 2,
+        "alternatives": [
+          "Quiné-equatorial",
+          "Panamá",
+          "Suriname",
+          "Timor Leste"
+        ]
+      },
+      {
+        "image": "https://flagpedia.net/data/flags/w580/kz.png",
+        "title": "De que país é essa bandeira?",
+        "description": "Difícil",
+        "answer": 0,
+        "alternatives": [
+          "Cazaquistão",
+          "Quirguistão",
+          "Tajiquistão",
+          "Uzbequistão"
         ]
       }
     ],
@@ -31,8 +117,8 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#0d47a1",
-        "secondary": "#29b6f6",
+        "primary": "#005D7C",
+        "secondary": "#005D7C",
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",
