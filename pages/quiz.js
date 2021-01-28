@@ -6,6 +6,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import AlternativesForm from '../src/components/AlternativesForm';
+import AnswerMessage from '../src/components/AnswerMessage';
 import Button from '../src/components/Button';
 
 function LoadingWidget() {
@@ -26,20 +27,36 @@ function ResultWidget({ results }) {
   return (
     <Widget>
       <Widget.Header>
-        Carregando...
+        Tela de Resultado:
       </Widget.Header>
 
       <Widget.Content>
-        <p>Você acertou {' '}{results.filter(resultTrue => resultTrue).length}{' '} perguntas</p>
+        <p>
+          Você acertou
+          {' '}
+          {/* {results.reduce((somatoriaAtual, resultAtual) => {
+            const isAcerto = resultAtual === true;
+            if (isAcerto) {
+              return somatoriaAtual + 1;
+            }
+            return somatoriaAtual;
+          }, 0)} */}
+          {results.filter((x) => x).length}
+          {' '}
+          perguntas
+        </p>
         <ul>
-          {
-            results.map((result, index) => {
-              <li key={`result_${result}_${index}`}>
-                #0{index+1} - Resultado: 
-                {result === true ? 'Acertou' : 'Errou'}
-              </li>
-            })
-          }
+          {results.map((result, index) => (
+            <li key={`result__${result}`}>
+              #
+              {index + 1}
+              {' '}
+              Resultado:
+              {result === true
+                ? 'Acertou'
+                : 'Errou'}
+            </li>
+          ))}
         </ul>
       </Widget.Content>
     </Widget>
@@ -89,6 +106,7 @@ function QuestionWidget({
         <AlternativesForm
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
+
             setIsQuestionSubmited(true);
             setTimeout(() => {
               addResult(isCorrect);
@@ -103,6 +121,7 @@ function QuestionWidget({
           {question.alternatives.map((alternative, alternativeIndex) => {
 
             const alternativeId = `alternative__${alternativeIndex}`;
+
             const selectedAlternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
             const isSelected = selectedAlternative === alternativeIndex
 
@@ -115,7 +134,7 @@ function QuestionWidget({
                 data-status={isQuestionSubmited && selectedAlternativeStatus}
               >
                 <input
-                  // style={{ display: 'none' }}
+                  style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
                   onChange={() => {setSelectedAlternative(alternativeIndex)}}
@@ -137,8 +156,8 @@ function QuestionWidget({
             Confirmar
           </Button>
 
-          {isQuestionSubmited && isCorrect && <p>Resposta correta!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Respora errada...</p>}
+          {isQuestionSubmited && isCorrect && <AnswerMessage>Resposta correta!</AnswerMessage>}
+          {isQuestionSubmited && !isCorrect && <AnswerMessage>Respora errada...</AnswerMessage>}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
