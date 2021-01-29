@@ -105,9 +105,9 @@ function QuestionWidget({
           {question.description}
         </p>
         <DicaDiv>
-          <Button onClick={() => setMostrarDica(!mostrarDica)}>
+          <Button.Dica onClick={() => setMostrarDica(!mostrarDica)}>
             Dica
-          </Button>
+          </Button.Dica>
           { mostrarDica && <p> {question.tip} </p> }
         </DicaDiv>
 
@@ -121,6 +121,7 @@ function QuestionWidget({
 
               onSubmit();
 
+              setMostrarDica(false);
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
             }, 1 * 1000);
@@ -168,7 +169,7 @@ function QuestionWidget({
           {isQuestionSubmited && isCorrect && <AnswerMessage>Resposta correta!</AnswerMessage>}
           {isQuestionSubmited && !isCorrect && <AnswerMessage>Respora errada...</AnswerMessage>}
 
-          {isQuestionSubmited && <p>{question.message}</p>}
+          {isQuestionSubmited && <AnswerMessage>{question.message}</AnswerMessage>}
         </AlternativesForm>
       </Widget.Content>
     </Widget>

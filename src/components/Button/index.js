@@ -25,6 +25,33 @@ const Button = styled.button`
   }
 `;
 
+Button.Dica = styled.button`
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.contrastText};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  border: 0;
+  width: 40%;
+  max-height: 30px;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+  outline: 0;
+  transition: .3s;
+  margin-top: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+  &:disabled {
+    background-color: #979797;
+    cursor: not-allowed;
+  }
+`;
+
 Button.propTypes = {
   type: PropTypes.oneOf(['submit', 'type', 'button']).isRequired,
   children: PropTypes.node.isRequired,
