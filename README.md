@@ -1,3 +1,31 @@
+# Flags Quiz - Alura Quis
+
+## Descriçao / Description
+
+Quiz de bandeiras (React JS e Next JS) feito durante a segunra imersao React da Alura. 
+
+Flag quiz game (React JS and Next JS). Alura's React workshop.
+
+## Preview 
+
+![img1](https://i.imgur.com/212m2tB.png)
+
+![gif1](http://i.imgur.com/lw3VoNdh.gif)
+
+## How to run
+
+```bash
+git clone https://github.com/LucasGuerraCavalcante/flags-quiz-next-js.git
+```
+
+```bash
+yarn install
+```
+
+```bash
+yarn dev
+```
+
 ## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
