@@ -38,7 +38,7 @@ export default function Home() {
         <Widget>
           <Widget.Header>
             <h1>
-              Quiz de bandeiras
+              Quiz de bandeiras 
             </h1>
           </Widget.Header>
           <Widget.Content>
@@ -47,6 +47,9 @@ export default function Home() {
 
               router.push(`/quiz?name=${name}`);
             }} >
+              <span>
+              🇧🇷 🇯🇵 🇪🇸 🇮🇹 🇷🇺 🇰🇷 🇨🇳 🇺🇸 🇬🇧 🇨🇱 🇿🇦
+              </span>
               <Input 
                 name="nomeDoUsuario"
                 value={name}
