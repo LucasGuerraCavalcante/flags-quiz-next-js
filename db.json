@@ -13,7 +13,9 @@
           "México",
           "Portugal",
           "Espanha"
-        ]
+        ],
+        "message": "Essa é a bandeira do México!!!",
+        "tip": "É um país muito famoso pela sua culinária e cultura."
       },
       {
         "image": "https://flagpedia.net/data/flags/w580/cn.png",
@@ -25,7 +27,9 @@
           "Vietnã",
           "União Soviética",
           "Angola"
-        ]
+        ],
+        "message": "Essa é a bandeira da China!!!",
+        "tip": "É um país que cresceu muito nos últimos anos."
       },
       {
         "image": "https://flagpedia.net/data/flags/w580/jm.png",
@@ -37,7 +41,9 @@
           "Namíbia",
           "Uganda",
           "Jamaica"
-        ]
+        ],
+        "message": "Essa é a bandeira da Jamaica!!!",
+        "tip": "Esse país é bastande conhecido pela sua arte, principalmente a música."
       },
       {
         "image": "https://flagpedia.net/data/flags/w580/ir.png",
@@ -48,8 +54,10 @@
           "Turquia",
           "Irã",
           "Argélia",
-          "Indonésia"
-        ]
+          "Iraque"
+        ],
+        "message": "Essa é a bandeira do Irã!!!",
+        "tip": "É um país que no passado foi berço de um dos maiores impérios do mundo."
       },
       {
         "image": "https://flagpedia.net/data/flags/w580/no.png",
@@ -61,7 +69,9 @@
           "Dinamarca",
           "Noruega",
           "Finlândia"
-        ]
+        ],
+        "message": "Essa é a bandeira da Noruega!!!",
+        "tip": "É um país muito conhecido pela exploração marítima e por músicos de Heavy Metal e Música Eletrônica."
       },
       {
         "image": "https://flagpedia.net/data/flags/w580/gr.png",
@@ -73,7 +83,9 @@
           "Estônia",
           "Finlândia",
           "Eslováquia"
-        ]
+        ],
+        "message": "Essa é a bandeira da Grécia!!!",
+        "tip": "É um país que foi conquistado inúmeras vezes, passando pelas mãos de diversos impérios."
       },
       {
         "image": "https://flagpedia.net/data/flags/w580/mn.png",
@@ -85,7 +97,9 @@
           "Nepal",
           "Butão",
           "Mongólia"
-        ]
+        ],
+        "message": "Essa é a bandeira da Mongólia!!!",
+        "tip": "É um país, relativamente pequeno, que faz fronteira com dois países gigantescos."
       },
       {
         "image": "https://flagpedia.net/data/flags/w580/sr.png",
@@ -97,7 +111,9 @@
           "Panamá",
           "Suriname",
           "Timor Leste"
-        ]
+        ],
+        "message": "Essa é a bandeira do Suriname!!!",
+        "tip": "Esse país foi uma colônia holandesa por muitos anos."
       },
       {
         "image": "https://flagpedia.net/data/flags/w580/kz.png",
@@ -109,7 +125,9 @@
           "Quirguistão",
           "Tajiquistão",
           "Uzbequistão"
-        ]
+        ],
+        "message": "Essa é a bandeira do Cazaquistão!!!",
+        "tip": "Existe um pesonagem de um filme/série de comédia famoso que é uma paródia esteriotipada do que americanos imaginam que seja alguem dessa região."
       }
     ],
     "external": [
@@ -127,3 +145,4 @@
       "borderRadius": "4px"
     }
   }
+  
