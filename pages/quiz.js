@@ -7,6 +7,7 @@ import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import AlternativesForm from '../src/components/AlternativesForm';
 import AnswerMessage from '../src/components/AnswerMessage';
+import DicaDiv from '../src/components/DicaDiv';
 import Button from '../src/components/Button';
 
 function LoadingWidget() {
@@ -72,6 +73,7 @@ function QuestionWidget({
 }) {
   const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
   const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
+  const [mostrarDica, setMostrarDica] = React.useState(false);
 
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer; 
@@ -102,6 +104,12 @@ function QuestionWidget({
         <p>
           {question.description}
         </p>
+        <DicaDiv>
+          <Button onClick={() => setMostrarDica(!mostrarDica)}>
+            Dica
+          </Button>
+          { mostrarDica && <p> {question.tip} </p> }
+        </DicaDiv>
 
         <AlternativesForm
           onSubmit={(infosDoEvento) => {
@@ -140,6 +148,7 @@ function QuestionWidget({
                   onChange={() => {setSelectedAlternative(alternativeIndex)}}
                   type="radio"
                 />
+
                 {alternative}
               </Widget.Topic>
             );
@@ -158,6 +167,8 @@ function QuestionWidget({
 
           {isQuestionSubmited && isCorrect && <AnswerMessage>Resposta correta!</AnswerMessage>}
           {isQuestionSubmited && !isCorrect && <AnswerMessage>Respora errada...</AnswerMessage>}
+
+          {isQuestionSubmited && <p>{question.message}</p>}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
